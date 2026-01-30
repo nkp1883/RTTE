@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Editor from "./editor/Editor";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import NotificationsPage from "./pages/NotificationsPage";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/editor" element={<Editor/>}/>
       <Route path="/signup" element={<Signup/>}/>
+      <Route path="/notifications" element={<NotificationsPage />} />
     </Routes>
   );
 }
