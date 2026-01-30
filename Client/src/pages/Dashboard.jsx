@@ -1,29 +1,32 @@
-const TopNav = () => {
+import TopNav from "../components/dashboard/TopNav";
+import CreateDocument from "../components/dashboard/CreateDocument";
+import DocumentsList from "../components/dashboard/DocumentsList";
+import CollaboratorsList from "../components/dashboard/CollaboratorsList";
+import Notifications from "../components/dashboard/Notifications";
+
+const Dashboard = () => {
   return (
-    <header className="bg-white/80 backdrop-blur border-b border-indigo-100">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-10">
-          <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            RTTE
-          </span>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+      <TopNav />
 
-          <nav className="flex gap-8 text-sm font-medium">
-            <span className="text-indigo-600 cursor-pointer">
-              Dashboard
-            </span>
-            <span className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-              Documents
-            </span>
-            <span className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-              Collaborators
-            </span>
-          </nav>
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <div className="bg-white/80 backdrop-blur rounded-2xl shadow-lg border border-white/60 p-8 space-y-12">
+          <CreateDocument />
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <DocumentsList />
+            </div>
+
+            <div className="space-y-8">
+              <CollaboratorsList />
+              <Notifications />
+            </div>
+          </div>
         </div>
-
-        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 shadow-md" />
-      </div>
-    </header>
+      </main>
+    </div>
   );
 };
 
-export default TopNav;
+export default Dashboard;
