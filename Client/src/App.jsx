@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Editor from "./editor/Editor";
 import Signup from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
       <Route path="/editor" element={<Editor/>}/>
       <Route path="/signup" element={<Signup/>}/>
