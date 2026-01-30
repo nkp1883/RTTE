@@ -6,6 +6,8 @@ import Editor from "./editor/Editor";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import NotificationsPage from "./pages/NotificationsPage";
+import DocumentsPage from "./pages/DocumentsPage";
+import CollaboratorsPage from "./pages/CollaboratorsPage";
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
       <Route path="/editor" element={<Editor/>}/>
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/notifications" element={<NotificationsPage />} />
+      <Route path="/documents" element={<DocumentsPage/>}/>
+      <Route path="/collaborators" element={<CollaboratorsPage/>}/>
     </Routes>
   );
 }
