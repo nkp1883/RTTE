@@ -4,6 +4,7 @@ import cors from "cors";
 import connectDB from "./src/config/db.js";
 import userRouter from "./src/routes/userRouter.js";
 import { startWSServer } from "./src/ws/wsServer.js";
+import documentRouter from "./src/routes/document.routes.js";
 
 dotenv.config();
 
@@ -18,6 +19,11 @@ app.use(express.json());
 
 // Routes
 app.use("/api/user", userRouter);
+
+app.use("/api", documentRouter);
+
+app.use("/api", collaborationRoutes);
+
 
 // Test route
 app.get("/", (req, res) => {
