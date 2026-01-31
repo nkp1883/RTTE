@@ -1,23 +1,15 @@
 
-import { useRef } from "react";
-import { useEditorSync } from "./useEditorSync";
+import { EditorContent } from "@tiptap/react";
 
-export default function Editor() {
-  const textareaRef = useRef(null);
-  useEditorSync(textareaRef);
+export default function Editor({ editor }) {
+  if (!editor) return null;
 
   return (
-    <textarea
-      ref={textareaRef}
-      placeholder="Start typing..."
-      style={{
-        width: "100vw",
-        height: "100vh",
-        fontSize: "16px",
-        padding: "12px",
-        boxSizing: "border-box",
-      }}
-    />
+    <div className="w-full min-h-[600px] p-6">
+      <EditorContent
+        editor={editor}
+        className="prose max-w-none focus:outline-none"
+      />
+    </div>
   );
 }
-
