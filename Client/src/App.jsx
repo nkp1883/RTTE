@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
-import Editor from "./editor/Editor";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import NotificationsPage from "./pages/NotificationsPage";
@@ -18,8 +18,11 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/editor" element={<Editor/>}/>
-      <Route path="/signup" element={<Signup/>}/>
+      <Route path="/signup" element={<Signup />} />
+
+      {/* Editor */}
+      <Route path="/editor" element={<EditorPage />} />
+
       <Route path="/notifications" element={<NotificationsPage />} />
       <Route path="/documents" element={<DocumentsPage/>}/>
       <Route path="/collaborators" element={<CollaboratorsPage/>}/>
