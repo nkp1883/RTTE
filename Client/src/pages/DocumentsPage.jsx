@@ -5,6 +5,15 @@ import { useNavigate } from "react-router-dom";
 const DocumentsPage = () => {
   const navigate = useNavigate();
 
+  const createNewDocument = () => {
+    const docId = crypto.randomUUID().slice(0, 8);
+    navigate(`/doc/${docId}`);
+  };
+
+  const openDocument = (id) => {
+    navigate(`/doc/${id}`);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       <TopNav />
@@ -22,7 +31,11 @@ const DocumentsPage = () => {
               </p>
             </div>
 
-            <button className="px-5 py-2.5 bg-indigo-600 text-white rounded-md font-medium hover:bg-indigo-700 transition">
+            {/* ✅ NEW DOCUMENT */}
+            <button
+              onClick={createNewDocument}
+              className="px-5 py-2.5 bg-indigo-600 text-white rounded-md font-medium hover:bg-indigo-700 transition"
+            >
               + New Document
             </button>
           </div>
@@ -32,7 +45,7 @@ const DocumentsPage = () => {
             {documents.map((doc) => (
               <div
                 key={doc.id}
-                onClick={() => navigate(`/document/${doc.id}`)}
+                onClick={() => openDocument(doc.id)}
                 className="flex justify-between items-center px-6 py-5 hover:bg-indigo-50 cursor-pointer transition"
               >
                 <div>

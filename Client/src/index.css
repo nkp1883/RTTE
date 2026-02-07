@@ -1,4 +1,31 @@
 @import "tailwindcss";
+/* Thick caret */
+.ql-cursor {
+  border-left-width: 4px !important;
+}
+
+/* BIG name bubble */
+.ql-cursor-name {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  transform: translateY(-140%);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Strong selection highlight */
+.ql-cursor-selection {
+  opacity: 0.35;
+}
+
+/* Make cursors feel alive */
+.ql-cursor,
+.ql-cursor-selection {
+  transition: all 0.12s ease-out;
+}
+
+
 
 
 

@@ -19,7 +19,7 @@ const DocumentsList = () => {
         {documents.map((doc) => (
           <div
             key={doc.id}
-            onClick={() => navigate(`/document/${doc.id}`)}
+            onClick={() => navigate(`/doc/${doc.id}`)}
             className="flex justify-between items-center px-6 py-4 hover:bg-indigo-50 cursor-pointer transition"
           >
             <div>

@@ -10,7 +10,6 @@ import DocumentsPage from "./pages/DocumentsPage";
 import CollaboratorsPage from "./pages/CollaboratorsPage";
 import TextEditor from "./pages/TextEditor";
 
-
 function App() {
   return (
     <Routes>
@@ -20,13 +19,12 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
-      {/* Editor */}
-      <Route path="/editor" element={<EditorPage />} />
-
       <Route path="/notifications" element={<NotificationsPage />} />
-      <Route path="/documents" element={<DocumentsPage/>}/>
-      <Route path="/collaborators" element={<CollaboratorsPage/>}/>
-      <Route path="/textEditor" element={<TextEditor/>}/>
+      <Route path="/documents" element={<DocumentsPage />} />
+      <Route path="/collaborators" element={<CollaboratorsPage />} />
+
+      {/* 🔑 SHAREABLE DOCUMENT ROUTE */}
+      <Route path="/doc/:id" element={<TextEditor />} />
     </Routes>
   );
 }
