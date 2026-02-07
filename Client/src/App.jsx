@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import NotificationsPage from "./pages/NotificationsPage";
 import DocumentsPage from "./pages/DocumentsPage";
 import CollaboratorsPage from "./pages/CollaboratorsPage";
+import TextEditor from "./pages/TextEditor";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path="/notifications" element={<NotificationsPage />} />
       <Route path="/documents" element={<DocumentsPage/>}/>
       <Route path="/collaborators" element={<CollaboratorsPage/>}/>
+      <Route path="/textEditor" element={<TextEditor/>}/>
     </Routes>
   );
 }
