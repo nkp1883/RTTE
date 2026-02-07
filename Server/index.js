@@ -5,6 +5,7 @@ import connectDB from "./src/config/db.js";
 import userRouter from "./src/routes/userRouter.js";
 import { startWSServer } from "./src/ws/wsServer.js";
 import documentRouter from "./src/routes/document.routes.js";
+import collaborationRoutes from "./src/routes/collaboration.routes.js";
 
 dotenv.config();
 
